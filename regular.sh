@@ -19,3 +19,13 @@ then
 else
         echo "Pattern not matched"
 fi
+
+
+read -p "Enter your email_id:(ex:abc.xyz@bl.co.in) " usermailid
+emailPattern="(^[a-z]{3}.)|(^[a-z]{3})|@([a-z]{2}.[a-z]{2}.)"
+if [[ $userEmail =~ emailPattern ]]
+then
+        echo "Yes pattern matched"
+else
+        echo "Pattern not matched"
+fi
