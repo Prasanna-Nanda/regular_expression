@@ -29,3 +29,14 @@ then
 else
         echo "Pattern not matched"
 fi
+
+
+  
+read -p "Enter your mobile_number:(ex:91 0000000000) " userMobileNumber
+mobilePattern="(^[0-9]{2}[ ])*[0-9]{10}"
+if [[ $userMobileNumber =~ mobilePattern ]]
+then
+        echo "Yes pattern matched"
+else
+        echo "Pattern not matched"
+fi
