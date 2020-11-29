@@ -40,3 +40,14 @@ then
 else
         echo "Pattern not matched"
 fi
+
+
+
+read -p "Enter the Password" userPassword
+passwordPattern="^(?=.{8,}$)(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]*[\@\#\^][a-zA-Z0-9]*$"
+if [[ $userPassword =~ $passwordPattern ]]
+then
+	echo "Yes pattern matched"
+else
+	echo "No pattern matched"
+fi
